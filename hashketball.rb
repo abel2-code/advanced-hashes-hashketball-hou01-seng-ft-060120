@@ -154,8 +154,11 @@ def get_team
   teamname.flatten
 end
 
-def team_colors(team)
-  found_team = get_team
+def team_colors(team_name)
+  found_team = get_team.find do |team|
+    team[:team_name] == team_name
+  end
+  found_team[:team_name]
 end
 
 def team_names
