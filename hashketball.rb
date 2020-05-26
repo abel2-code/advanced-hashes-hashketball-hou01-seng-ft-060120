@@ -182,7 +182,7 @@ def get_team_helper(team)
 end
 
 def player_numbers(team)
-  
+
 end
 def names
   game_hash[:home][players].map do |player|
