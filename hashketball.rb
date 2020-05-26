@@ -150,6 +150,8 @@ end
 def get_team_helper
   teamname = game_hash.keys.map do |team|
     game_hash[team][:team_name]
+  end
+  teamname.flatten
 end
 
 def team_colors(team)
