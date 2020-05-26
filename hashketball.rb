@@ -156,7 +156,7 @@ def get_team_helper(team)
   end
 end
 def team_colors(team)
-  get_team_healer(team)[]
+  get_team_helper(team)[:team_name][team_colors]
 end
 
 def team_names
