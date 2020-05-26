@@ -147,14 +147,11 @@ def shoe_size(player_name)
   found_player[:shoe]
 end
 
-def get_team_helper(team)
-  case team
-  when game_hash[:home][:team_name]
-    game_hash[:home]
-  when game_hash[:away][:team_name]
-    game_hash[:away]
-  end
+def get_team_helper
+  teamname = game_hash.keys.map do |team|
+    game_hash[team][:team_name]
 end
+  
 def team_colors(team)
   get_team_helper(team)[:team_name][:team_colors]
 end
