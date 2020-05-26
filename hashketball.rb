@@ -163,8 +163,8 @@ def team_names
 
 end
 
-def player_numbers(team_name)
-  get_team_helper(team_name)[:players].map do |key, value|
+def player_numbers(team)
+  get_team_helper(team)[:players].map do |key, value|
     value[:number]
   end
 end
