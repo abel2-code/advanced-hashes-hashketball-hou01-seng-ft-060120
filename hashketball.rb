@@ -158,7 +158,7 @@ def team_colors(team_name)
   found_team = get_team.find do |team|
     team[:team_name] == team_name
   end
-  found_team[:team_name]
+  found_team[:team_colors]
 end
 
 def team_names
