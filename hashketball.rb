@@ -126,11 +126,16 @@ def game_hash
   }
 end
 
-def num_points_scored(player_name)
-  game_hash.each do |location, team_data|
-    found_player = team_data[:players].select do |player_data|
-      player_data[:player_name] == player_name
-    end
-    found_player[0][:points]
+def get_players
+  players = game_hash.keys.map do |team|
+    game_hash[team][:players]
   end
 end
+
+def num_points_scored(player_name)
+  found_player = get_players.find do |player|
+    player[:player_name] == player_name
+  end
+  found_player[:points]
+end
+
