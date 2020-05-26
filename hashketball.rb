@@ -147,48 +147,9 @@ def shoe_size(player_name)
   found_player[:shoe]
 end
 
-def get_team(team)
-  case team
-  when game_hash[:home][:team_name]
-    game_hash[:home]
-  when game_hash[away][:team_name]
-    game_hash[:away]
-  end
-end
-
-def team_colors(team_name)
-  found_team = get_team(team_name).find do |team|
-    team[:team_name] == team_name
-  end
-  found_team[:colors]
-end
-
-def team_names
-
-end
-
-def player_numbers(team)
-  puts get_team_helper(team).inspect
-  get_team_helper(team)[:players].map do |key, value|
-    value[:number].compact
-  end
-end
-
-
-def player_stats
-
-end
-
-def big_shoe_rebounds
-
-end
-
-
-
-
-
-def names
-  game_hash[:home][players].map do |player|
-    player[:player_name]
+def team_colors(team_input)
+  if team_input == "Charlotte Hornets"
+    return game_hash[:away][:colors]
+  else return game_hash[home][:colors]
   end
 end
