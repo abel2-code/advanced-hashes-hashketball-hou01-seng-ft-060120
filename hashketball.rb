@@ -168,7 +168,7 @@ def player_numbers(team)
     value[:number].compact
   end
 end
-binding.pry
+
 
 def player_stats
 
