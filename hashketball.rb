@@ -151,4 +151,5 @@ def team_colors
   col = game_hash.keys.map do |team|
     game_hash[team][:colors]
   end
+  col.flatten
 end
