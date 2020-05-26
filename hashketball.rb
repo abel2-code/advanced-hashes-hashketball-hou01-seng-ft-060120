@@ -165,7 +165,7 @@ end
 
 def player_numbers(team)
   get_team_helper(team)[:players].map do |key, value|
-    value[:number]
+    value[:number].compact
   end
 end
 binding.pry
