@@ -131,5 +131,6 @@ def num_points_scored(player_name)
     found_player = team_data[:players].select do |player_data|
       player_data[:player_name] == player_name
     end
+    found_player[0][:points]
   end
 end
