@@ -149,3 +149,7 @@ def names
     player[:player_name]
   end
 end
+
+def num_points_scored(player)
+  player_helper[player][:points]
+end
