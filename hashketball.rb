@@ -147,9 +147,17 @@ def shoe_size(player_name)
   found_player[:shoe]
 end
 
+def get_team_helper(team)
+  case team
+  when game_hash[:home][:team_name]
+    game_hash[:home]
+  when game_hash[:away][:team_name]
+    game_hash[:away]
+  end
+end
+
 def team_colors
-  col = game_hash.keys.map do |team, value|
-    game_hash[team][:colors]
+  
   end
 end
 
@@ -158,9 +166,11 @@ def team_names
 end
 
 def player_numbers
-  get_players.map do |key, value|
+  get_team_helper(team)[:players].map do |key, value|
     value[:number]
+  end]
   end
+  
 end
 
 def player_stats
@@ -172,14 +182,7 @@ def big_shoe_rebounds
 end
 
 
-def get_team_helper(team)
-  case team
-  when game_hash[:home][:team_name]
-    game_hash[:home]
-  when game_hash[:away][:team_name]
-    game_hash[:away]
-  end
-end
+
 
 def player_numbers(team)
 
