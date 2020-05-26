@@ -130,6 +130,7 @@ def get_players
   players = game_hash.keys.map do |team|
     game_hash[team][:players]
   end
+  players.flatten
 end
 
 def num_points_scored(player_name)
