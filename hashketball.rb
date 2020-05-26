@@ -151,5 +151,5 @@ def names
 end
 
 def num_points_scored(player)
-  player_helper[player][:points]
+  player_helper[:player][points]
 end
