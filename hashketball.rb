@@ -180,11 +180,13 @@ def player_stats(input)
   game_hash.each do |team, team_info|
     team_info.each do |key, value|
       if key == :players
-        player.delete(player_name)
-        return player
+        value.each do |player|
+          if input == player[:player_name]
+            player.delete(player_name)
+            return player
+          end
+        end
       end
     end
-  end
-end
   end
 end
