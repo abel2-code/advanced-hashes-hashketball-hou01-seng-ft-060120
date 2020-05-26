@@ -192,4 +192,3 @@ def names
     player[:player_name]
   end
 end
-
