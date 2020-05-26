@@ -167,7 +167,7 @@ end
 def player_numbers
   get_team_helper(team)[:players].map do |key, value|
     value[:number]
-  end]
+  end
   end
 
 end
