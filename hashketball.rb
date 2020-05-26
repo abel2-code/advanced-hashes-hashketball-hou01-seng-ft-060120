@@ -148,8 +148,7 @@ def shoe_size(player_name)
 end
 
 def team_colors
-  col = game_hash.keys.map do |team|
-    game_hash[team][:colors]
+  colors = game_hash.keys.map do |team|
+    game_hash[team][:team_colors]
   end
-  col.flatten
 end
