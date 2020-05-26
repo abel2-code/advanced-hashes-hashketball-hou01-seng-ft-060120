@@ -182,9 +182,7 @@ end
 
 
 
-def player_numbers(team)
 
-end
 def names
   game_hash[:home][players].map do |player|
     player[:player_name]
