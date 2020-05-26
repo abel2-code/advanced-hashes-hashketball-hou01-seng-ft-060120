@@ -164,7 +164,7 @@ def team_names
 end
 
 def player_numbers(team)
-  puts get_team_helper.inspect
+  puts get_team_helper(team).inspect
   get_team_helper(team)[:players].map do |key, value|
     value[:number].compact
   end
