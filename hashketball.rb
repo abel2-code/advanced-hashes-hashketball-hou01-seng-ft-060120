@@ -147,7 +147,7 @@ def shoe_size(player_name)
   found_player[:shoe]
 end
 
-def get_team_helper
+def get_team
   teamname = game_hash.keys.map do |team|
     game_hash[team][:team_name]
   end
@@ -155,11 +155,11 @@ def get_team_helper
 end
 
 def team_colors(team)
-  get_team_helper(team)[:team_name][:team_colors]
+  found_team = get_team
 end
 
 def team_names
-
+  
 end
 
 def player_numbers(team)
