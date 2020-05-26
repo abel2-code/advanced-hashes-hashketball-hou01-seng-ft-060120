@@ -158,7 +158,9 @@ def team_names
 end
 
 def player_numbers
-
+  get_players(team)[:players].map do |key, value|
+    value[:number]
+  end
 end
 
 def player_stats
@@ -169,9 +171,6 @@ def big_shoe_rebounds
 
 end
 
-def player_helper
-  game_hash[:home][:players] + game_hash[:away][:players]
-end
 
 def get_team_helper(team)
   case team
@@ -183,9 +182,7 @@ def get_team_helper(team)
 end
 
 def player_numbers(team)
-  get_team_helper(team)[:players].map do |key, value|
-    value[:number]
-  end
+  
 end
 def names
   game_hash[:home][players].map do |player|
