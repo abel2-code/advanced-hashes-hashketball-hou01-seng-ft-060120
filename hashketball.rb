@@ -158,7 +158,6 @@ end
 
 def team_colors
 
-  end
 end
 
 def team_names
