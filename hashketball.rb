@@ -153,4 +153,5 @@ end
 def num_points_scored(player)
   player_helper[player_name].map do |key, value|
     value[:points]
+  end
 end
