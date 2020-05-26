@@ -149,6 +149,6 @@ end
 
 def team_colors
   team = game_hash.keys.map do |team|
-    game_hash[team][:team_colors]
+    game_hash[team][:colors]
   end
 end
