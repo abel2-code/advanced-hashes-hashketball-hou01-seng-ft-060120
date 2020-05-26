@@ -155,7 +155,7 @@ def get_team_helper(team)
     game_hash[:away]
   end
 end
-
+binding.pry
 def team_colors(team)
   get_team_healer(team)[]
 end
