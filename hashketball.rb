@@ -157,7 +157,7 @@ def get_team_helper(team)
 end
 
 def team_colors
-  
+
   end
 end
 
@@ -170,7 +170,7 @@ def player_numbers
     value[:number]
   end]
   end
-  
+
 end
 
 def player_stats
